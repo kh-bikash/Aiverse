@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, HashRouter as Router, Routes } from 'react-router-dom';
 import { OSLayout } from '../components/os/OSLayout.jsx';
 import { osRoutes } from '../data/osRoutes.js';
 
