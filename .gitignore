@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-ssr/
 .env
 .env.*
 !.env.example
@@ -7,4 +8,100 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 .DS_Store
+*.local
+
+# Build outputs
+build/
+out/
+*.local
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.prettierignore
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+logs
+*.log
+
+# npm
+.npm
+
+# Misc
+.cache
+.parcel-cache
+.next
+.nuxt
+.cache/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.venv
+env/
+venv/
+.Python
+*.egg-info/
+__pycache__/
+
+# Production
+dist/
+build/
+
+# Performance
+.lighthouseci/
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Local development
+.vercel
+*.pem
+
+# Package managers
+pnpm-lock.yaml
+
+# Optional npm cache directory
+.npm
+
+# Temporary files
+tmp/
+temp/
