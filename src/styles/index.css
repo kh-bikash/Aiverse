@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #006666;
+  --color-secondary: #f1f2f5;
+  --color-success: #00a63d;
+  --color-warning: #fe9900;
+  --color-danger: #ff2157;
+  --color-surface: #e7e5e4;
+  --color-text: #1e2938;
+  --shadow-neo: 12px 12px 28px rgba(154, 151, 148, 0.72), -12px -12px 26px rgba(255, 255, 255, 0.76);
+  --shadow-neo-soft: 7px 7px 18px rgba(154, 151, 148, 0.58), -7px -7px 16px rgba(255, 255, 255, 0.68);
+  --shadow-neo-inset: inset 8px 8px 18px rgba(154, 151, 148, 0.58), inset -8px -8px 18px rgba(255, 255, 255, 0.74);
+  color: var(--color-text);
+  background: var(--color-surface);
+  font-family: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(0, 102, 102, 0.18), transparent 26rem),
+    radial-gradient(circle at 82% 18%, rgba(0, 166, 61, 0.12), transparent 28rem),
+    linear-gradient(135deg, var(--color-secondary), var(--color-surface));
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-warning);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
+
+.neo-panel {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 8px;
+  background: rgba(231, 229, 228, 0.82);
+  box-shadow: var(--shadow-neo);
+}
+
+.neo-inset {
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 8px;
+  background: rgba(231, 229, 228, 0.92);
+  box-shadow: var(--shadow-neo-inset);
+}
+
+.neo-button {
+  border-radius: 8px;
+  box-shadow: var(--shadow-neo-soft);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.neo-button:hover {
+  transform: translateY(-2px);
+}
+
+.neo-button:active,
+.neo-pressed {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-neo-inset);
+}
+
+.scan-grid {
+  background-image:
+    linear-gradient(rgba(0, 102, 102, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 102, 0.13) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.os-hologram {
+  background:
+    linear-gradient(135deg, rgba(0, 102, 102, 0.12), transparent 40%),
+    linear-gradient(45deg, rgba(0, 166, 61, 0.1), transparent 48%),
+    rgba(231, 229, 228, 0.86);
+}
+
+.neural-loader {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-loader::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 102, 0.18), transparent);
+  transform: translateX(-100%);
+  animation: neural-scan 2.4s infinite;
+}
+
+@keyframes neural-scan {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
